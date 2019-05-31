@@ -66,7 +66,7 @@
   :commands popwin-mode
   :init (add-hook 'after-init-hook #'popwin-mode)
   :config
-  (bind-key "C-z" popwin:keymap)
+;;  (bind-key "C-z" popwin:keymap)
 
   ;; don't use default value but manage it ourselves
   (setq popwin:special-display-config

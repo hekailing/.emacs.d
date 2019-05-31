@@ -66,8 +66,8 @@
 
   ;; Support yas in commpany
   ;; Note: Must be the last to involve all backends
-  (defvar company-enable-yas t
-    "Enable yasnippet for all backends.")
+  ;; (defvar company-enable-yas t
+  ;;   "Enable yasnippet for all backends.")
 
   (defun company-backend-with-yas (backend)
     (if (or (not company-enable-yas)

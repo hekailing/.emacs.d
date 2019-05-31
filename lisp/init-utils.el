@@ -78,10 +78,10 @@
   (setq treemacs-header-function #'treemacs-projectile-create-header))
 
 ;; Dash: only avaliable on macOS
-(when sys/macp
-  (use-package dash-at-point
-    :bind (("\C-cd" . dash-at-point)
-           ("\C-ce" . dash-at-point-with-docset))))
+;; (when sys/macp
+;;   (use-package dash-at-point
+;;     :bind (("\C-cd" . dash-at-point)
+;;           ("\C-ce" . dash-at-point-with-docset))))
 
 ;; Youdao Dictionay
 (use-package youdao-dictionary

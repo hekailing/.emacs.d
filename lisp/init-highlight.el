@@ -33,9 +33,9 @@
 ;;; Code:
 
 ;; Highlight the current line
-(use-package hl-line
-  :ensure nil
-  :init (add-hook 'after-init-hook #'global-hl-line-mode))
+;; (use-package hl-line
+;;   :ensure nil
+;;   :init (add-hook 'after-init-hook #'global-hl-line-mode))
 
 ;; Highlight symbols
 (use-package symbol-overlay
@@ -55,9 +55,9 @@
   (setq show-paren-when-point-in-periphery t))
 
 ;; Highlight indentions
-(use-package highlight-indent-guides
-  :init (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
-  :config (setq highlight-indent-guides-method 'character))
+;; (use-package highlight-indent-guides
+;;   :init (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
+;;   :config (setq highlight-indent-guides-method 'character))
 
 ;; Colorize color names in buffers
 (use-package rainbow-mode
@@ -124,7 +124,7 @@
   :config
   (setq whitespace-line-column fill-column) ;; limit line length
   ;; automatically clean up bad whitespace
-  (setq whitespace-action '(auto-cleanup))
+  ;; (setq whitespace-action '(auto-cleanup))
   ;; only show bad whitespace
   (setq whitespace-style '(face
                            trailing space-before-tab

@@ -104,7 +104,8 @@
           ((executable-find "rg")
            "rg -i -M 120 --no-heading --line-number --color never '%s' %s")
           ((executable-find "ag")
-           "ag -i --noheading --nocolor --nofilename --numbers '%s' %s"))))
+           "ag -i --noheading --nocolor --nofilename --numbers '%s' %s")
+          (t counsel-grep-base-command))))
     (setq counsel-grep-base-command command))
 
   ;; Integration with `projectile'
@@ -180,9 +181,9 @@
     :diminish counsel-gtags-mode
     :bind (:map counsel-gtags-mode-map
                 ("M-." . counsel-gtags-find-definition)
-                ("M-r" . counsel-gtags-find-reference)
+                ("M-," . counsel-gtags-find-reference)
                 ("M-s" . counsel-gtags-find-symbol)
-                ("M-," . counsel-gtags-go-backward))
+                ("M-*" . counsel-gtags-go-backward))
     :init
     (setq counsel-gtags-auto-update t)
 

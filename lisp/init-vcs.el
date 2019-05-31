@@ -92,7 +92,7 @@
 (use-package gitignore-mode)
 
 ;; Subversion
-(use-package psvn)
+;; (use-package psvn)
 
 ;; Open github/gitlab/bitbucket page
 (use-package browse-at-remote)

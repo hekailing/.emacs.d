@@ -86,31 +86,31 @@
   :config (setq coffee-tab-width 2))
 
 ;; Typescript Interactive Development Environment
-(use-package tide
-  :diminish tide-mode
-  :init
-  (defun setup-tide-mode ()
-    "Setup tide mode."
-    (interactive)
-    (tide-setup)
-    (eldoc-mode 1)
-    (tide-hl-identifier-mode 1))
+;; (use-package tide
+;;   :diminish tide-mode
+;;   :init
+;;   (defun setup-tide-mode ()
+;;     "Setup tide mode."
+;;     (interactive)
+;;     (tide-setup)
+;;     (eldoc-mode 1)
+;;     (tide-hl-identifier-mode 1))
 
-  (add-hook 'typescript-mode-hook #'setup-tide-mode)
+;;   (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
-  (with-eval-after-load 'js2-mode
-    (add-hook 'js2-mode-hook #'setup-tide-mode))
+;;   (with-eval-after-load 'js2-mode
+;;     (add-hook 'js2-mode-hook #'setup-tide-mode))
 
-  (add-hook 'before-save-hook #'tide-format-before-save)
-  :config
-  (setq tide-format-options
-        '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions
-          t
-          :placeOpenBraceOnNewLineForFunctions
-          nil))
+;;   (add-hook 'before-save-hook #'tide-format-before-save)
+;;   :config
+;;   (setq tide-format-options
+;;         '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions
+;;           t
+;;           :placeOpenBraceOnNewLineForFunctions
+;;           nil))
 
-  (with-eval-after-load 'company
-    (cl-pushnew (company-backend-with-yas 'company-tide) company-backends)))
+;;   (with-eval-after-load 'company
+;;     (cl-pushnew (company-backend-with-yas 'company-tide) company-backends)))
 
 ;; Major mode for editing web templates
 (use-package web-mode
@@ -118,7 +118,7 @@
   :config
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-code-indent-offset 4)
 
   ;; Complete for web,html,emmet,jade,slim modes
   (with-eval-after-load 'company

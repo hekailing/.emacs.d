@@ -104,16 +104,17 @@
 (setq-default fill-column 80)
 (setq column-number-mode t)
 (setq line-number-mode t)
+(setq global-linum-mode -1)
 
 ;; Show native line numbers if possible, otherwise use linum
-(if (fboundp 'display-line-numbers-mode)
-    (use-package display-line-numbers
-      :ensure nil
-      :init (add-hook 'prog-mode-hook #'display-line-numbers-mode))
-  (use-package linum-off
-    :demand
-    :init (add-hook 'after-init-hook #'global-linum-mode)
-    :config (setq linum-format "%4d ")))
+;; (if (fboundp 'display-line-numbers-mode)
+;;     (use-package display-line-numbers
+;;       :ensure nil
+;;       :init (add-hook 'prog-mode-hook #'display-line-numbers-mode))
+;;   (use-package linum-off
+;;     :demand
+;;     :init (add-hook 'after-init-hook #'global-linum-mode)
+;;     :config (setq linum-format "%4d ")))
 
 ;; Mouse & Smooth Scroll
 ;; Scroll one line at a time (less "jumpy" than defaults)

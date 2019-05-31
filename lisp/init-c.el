@@ -39,6 +39,7 @@
   (add-hook 'c-mode-common-hook
             (lambda ()
               (c-set-style "bsd")
+              (c-set-offset 'inextern-lang 0)
               (setq tab-width 4)
               (setq c-basic-offset 4)
 
